@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <form action="{{ path('login') }}" class="form-signin" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+
+        <label for="_username" class="sr-only">Username</label>
+        <input type="text"
+               id="_username"
+               name="_username"
+               class="form-control"
+               placeholder="Username"
+               required
+               autofocus>
+
+        <label for="_password" class="sr-only">Password</label>
+        <input type="password"
+               id="_password"
+               name="_password"
+               class="form-control"
+               placeholder="Password"
+               required>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+            </div>
+            <div class="col-md-6">
+                <a href="{{ path('registration') }}" class="btn btn-lg btn-success btn-block">Register</a>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
